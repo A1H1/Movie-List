@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity implements Callback<List<Ite
 
         listView = findViewById(R.id.main_activity_lv);
 
-
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Config.URL)
                 .addConverterFactory(GsonConverterFactory.create())

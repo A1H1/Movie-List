@@ -15,12 +15,9 @@ import java.util.List;
 
 public class ItemAdapter  extends ArrayAdapter<Item> {
     private Context context;
-    private List<Item> items;
-    private int resourceLayout;
 
     ItemAdapter(Context context, List<Item> items) {
         super(context, R.layout.item_view, items);
-        this.items = items;
         this.context=context;
 
     }
@@ -30,10 +27,7 @@ public class ItemAdapter  extends ArrayAdapter<Item> {
         Item item = getItem(position);
         ViewHolder viewHolder;
 
-        final View result;
-
         if (convertView == null) {
-
             viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_view, parent, false);
@@ -43,12 +37,9 @@ public class ItemAdapter  extends ArrayAdapter<Item> {
             viewHolder.releaseYear = convertView.findViewById(R.id.item_view_year);
             viewHolder.image = convertView.findViewById(R.id.item_view_image);
 
-            result=convertView;
-
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
-            result=convertView;
         }
 
         if (item != null) {

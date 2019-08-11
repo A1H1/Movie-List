@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Movie List</string>
+    <string name="movie_thumb">Movie Thumb</string>
 </resources>
