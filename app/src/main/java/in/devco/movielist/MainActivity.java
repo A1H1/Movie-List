@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements Callback<List<Ite
 
         swipeRefreshLayout = findViewById(R.id.main_activity_srl);
         listView = findViewById(R.id.main_activity_lv);
-        swipeRefreshLayout.setOnRefreshListener(this);
+        swipeRefreshLayout.setOnRefreshListener(this); //Refresh Listener
 
-        update();
+        update(); //Fetching data from server using Retrofit 2
     }
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements Callback<List<Ite
             Log.e(TAG, "Code: " + response.code());
         else{
             List<Item> items = response.body();
-            listView.setAdapter(new ItemAdapter(MainActivity.this, items));
+            listView.setAdapter(new ItemAdapter(MainActivity.this, items)); //Custom List View Adapter
             swipeRefreshLayout.setRefreshing(false);
         }
     }
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements Callback<List<Ite
 
     @Override
     public void onRefresh() {
-        update();
+        update(); //calling update
     }
 
     private void update() {

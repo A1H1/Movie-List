@@ -45,12 +45,12 @@ public class ItemAdapter  extends ArrayAdapter<Item> {
         if (item != null) {
             viewHolder.title.setText(item.getTitle());
 
-            String rating = "Rating: " + item.getRating();
+            String rating = "Rating: " + item.getRating(); //Rating
             viewHolder.rating.setText(rating);
 
             StringBuilder genre = new StringBuilder();
             List<String> genres = item.getGenre();
-            for (int j = 0; j<genres.size(); j++) {
+            for (int j = 0; j<genres.size(); j++) {     //Generating genres
                 genre.append(genres.get(j));
                 if (j < genres.size() - 1)
                     genre.append(", ");
@@ -59,7 +59,7 @@ public class ItemAdapter  extends ArrayAdapter<Item> {
 
             viewHolder.releaseYear.setText(String.valueOf(item.getReleaseYear()));
 
-            Glide.with(context).load(item.getImage())
+            Glide.with(context).load(item.getImage()) //Setting Image using Glide
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .centerCrop()
                     .error(R.drawable.ic_placeholder_wallpaper)
