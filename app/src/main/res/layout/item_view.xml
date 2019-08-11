@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#DCDCDC"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/item_view_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@mipmap/test"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transformers: Age of Extinction"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/item_view_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating: 6.3"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/item_view_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Action, Adventure, Sci-Fi"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_view_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="2014"/>
+</RelativeLayout>
