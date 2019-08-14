@@ -1,31 +1,31 @@
-package in.devco.movielist;
+package in.devco.movielist.Model;
 
 import java.util.List;
 
-class Item {
+public class Item {
     private String title;
     private String image;
     private float rating;
     private int releaseYear;
     private List<String> genre;
 
-    String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    String getImage() {
+    public String getImage() {
         return image;
     }
 
-    float getRating() {
+    public float getRating() {
         return rating;
     }
 
-    int getReleaseYear() {
+    public int getReleaseYear() {
         return releaseYear;
     }
 
-    List<String> getGenre() {
+    public List<String> getGenre() {
         return genre;
     }
 }

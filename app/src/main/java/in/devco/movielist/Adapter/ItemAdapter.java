@@ -1,4 +1,4 @@
-package in.devco.movielist;
+package in.devco.movielist.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,13 +13,15 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.List;
 
+import in.devco.movielist.Model.Item;
+import in.devco.movielist.R;
+
 public class ItemAdapter  extends ArrayAdapter<Item> {
     private Context context;
 
-    ItemAdapter(Context context, List<Item> items) {
+    public ItemAdapter(Context context, List<Item> items) {
         super(context, R.layout.item_view, items);
         this.context=context;
-
     }
 
     @Override
@@ -38,9 +40,8 @@ public class ItemAdapter  extends ArrayAdapter<Item> {
             viewHolder.image = convertView.findViewById(R.id.item_view_image);
 
             convertView.setTag(viewHolder);
-        } else {
+        } else
             viewHolder = (ViewHolder) convertView.getTag();
-        }
 
         if (item != null) {
             viewHolder.title.setText(item.getTitle());

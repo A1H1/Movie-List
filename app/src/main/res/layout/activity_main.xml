@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#37474f"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/main_activity_srl"
