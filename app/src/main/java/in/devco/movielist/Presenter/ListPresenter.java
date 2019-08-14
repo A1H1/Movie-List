@@ -1,6 +1,5 @@
 package in.devco.movielist.Presenter;
 
-import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -48,6 +47,7 @@ public class ListPresenter implements Callback<List<Item>>, IListPresenter {
 
     @Override
     public void onFailure(@NonNull Call<List<Item>> call, @NonNull Throwable t) {
+        iListView.updateFailed();
         Log.e(TAG, t.getMessage());
     }
 }
